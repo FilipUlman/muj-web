@@ -1,0 +1,47 @@
+/* Kontainer pro banner, který bude obsahovat obrázek a text */
+.banner-container {
+    display:flex;
+  
+    position:relative;
+ 
+    width: 100vw; /* Zajistí šířku na 100% */
+    height: 70vh; /* Zajistí, že banner zabere 100% výšky viewportu */
+    overflow:auto;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Udržuje poměr stran obrázku, ale ořízne ho, pokud je potřeba */
+    object-position: center; /* Umístí obrázek na střed */
+    display: flex; /* Odstraní mezery pod obrázkem */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Text na banneru */
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Středování textu */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Stín textu pro lepší čitelnost */
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  /* Zajistí, že obrázek bude responsivní */
+  .centered-image {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+  }
