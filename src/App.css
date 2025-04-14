@@ -1,0 +1,66 @@
+/* Root pro centrum obsahu */
+#root {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Vertikálně na začátek */
+  align-items: center; /* Horizontálně na střed */
+  min-height: 100vh; /* Ujistíme se, že to zabírá celou výšku */
+  text-align: center;
+}
+
+/* Navigace fixní na vrchu */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Rodičovský kontejner pro video */
+.video-container {
+  position: absolute; /* Aby video bylo umístěno nad obsahem */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh; /* Video zabírá celou výšku */
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start; /* Posuneme video na začátek (víc doleva) */
+  padding-left: 20%; /* Posune video víc doprava */
+}
+
+/* Video samotné */
+.transparent-video {
+  width: 100%; /* Video zabírá 100% šířky kontejneru */
+  height: 100%; /* Video zabírá 100% výšky */
+  object-fit: cover; /* Video se přizpůsobí, ale zachová si poměr stran */
+  filter: brightness(50%); /* Ztmaví video pro lepší kontrast textu */
+}
+
+/* Obsah stránky */
+.content {
+  position: relative;
+  z-index: 2; /* Obsah je nad videem */
+  padding-top: 80px; /* Prostor pro fixní navigaci */
+  text-align: left; /* Text bude zarovnán nalevo */
+  width: 80%; /* Určujeme šířku obsahu */
+  margin: 0 auto; /* Středíme obsah */
+}
+
+/* Prostor pro tlačítka a karty */
+.card {
+  background: rgba(255, 255, 255, 0.8); /* Poloprůhledné pozadí pro karty */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* Odkaz pro text */
+.read-the-docs {
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+}
